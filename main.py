@@ -3,10 +3,8 @@ import telebot
 import speech_recognition
 from pydub import AudioSegment
 
-
 # Ниже нужно вставить токен, который дал BotFather при регистрации
-# Пример: token = '2007628239:AAEF4ZVqLiRKG7j49EC4vaRwXjJ6DN6xng8'
-token = '<ваш токен>'  # <<< Ваш токен
+token = '6392768142:AAGazkZXSgNRMM8FLjKsP0N_aEnK9-Pn5ts'
 
 bot = telebot.TeleBot(token)
 
@@ -63,7 +61,5 @@ def transcript(message):
     bot.send_message(message.chat.id, text)
 
 
-# Запускаем бота. Он будет работать до тех пор, пока работает ячейка
-# (крутится значок слева).
-# Остановим ячейку - остановится бот
+# Запускаем бота. Он будет работать до тех пор, пока не вылетит либо не завершим сами
 bot.polling()
